@@ -1,0 +1,2 @@
+k21_controller
+-DCATKIN_DEVEL_PREFIX=/home/rizky/k21_robocon2022/devel -DCMAKE_INSTALL_PREFIX=/home/rizky/k21_robocon2022/install -G Unix Makefiles
