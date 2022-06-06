@@ -7,4 +7,7 @@
         <param name="port" value="/dev/ttyUSB0"/>
         <param name="baud" value="115200"/>
     </node>
+    <node pkg="k21_controller" namne="lifter_node" type="lifter" output="screen"/>
+    <node pkg="k21_controller" namne="k21_joyNode" type="k21_joyNode" output="screen"/>
+    <node pkg="k21_controller" namne="gripper_lagori" type="gripper_lagori" output="screen"/>
 </launch>
