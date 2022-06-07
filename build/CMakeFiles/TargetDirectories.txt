@@ -82,3 +82,10 @@
 /home/rizky/k21_robocon2022/build/k21_controller/CMakeFiles/k21_main.dir
 /home/rizky/k21_robocon2022/build/k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
 /home/rizky/k21_robocon2022/build/k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir
+/home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/install/strip.dir
+/home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/install/local.dir
+/home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/install.dir
+/home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/list_install_components.dir
+/home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/rebuild_cache.dir
+/home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/edit_cache.dir
+/home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/test.dir

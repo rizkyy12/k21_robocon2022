@@ -1,0 +1,8 @@
+prefix=/home/rizky/k21_robocon2022/devel
+
+Name: k21_controller_r1
+Description: Description of k21_controller_r1
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

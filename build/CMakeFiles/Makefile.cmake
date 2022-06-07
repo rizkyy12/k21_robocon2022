@@ -18,10 +18,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "k21_controller/catkin_generated/ordered_paths.cmake"
   "k21_controller/catkin_generated/package.cmake"
   "k21_controller/cmake/k21_controller-genmsg.cmake"
+  "k21_controller_r1/catkin_generated/ordered_paths.cmake"
+  "k21_controller_r1/catkin_generated/package.cmake"
   "/home/rizky/k21_robocon2022/devel/share/k21_controller/cmake/k21_controller-msg-paths.cmake"
   "/home/rizky/k21_robocon2022/src/CMakeLists.txt"
   "/home/rizky/k21_robocon2022/src/k21_controller/CMakeLists.txt"
   "/home/rizky/k21_robocon2022/src/k21_controller/package.xml"
+  "/home/rizky/k21_robocon2022/src/k21_controller_r1/CMakeLists.txt"
+  "/home/rizky/k21_robocon2022/src/k21_controller_r1/package.xml"
   "/opt/ros/noetic/share/catkin/cmake/all.cmake"
   "/opt/ros/noetic/share/catkin/cmake/assert.cmake"
   "/opt/ros/noetic/share/catkin/cmake/atomic_configure_file.cmake"
@@ -214,6 +218,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googletest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "k21_controller/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "k21_controller_r1/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

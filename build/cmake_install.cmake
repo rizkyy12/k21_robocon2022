@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/rizky/k21_robocon2022/build/gtest/cmake_install.cmake")
   include("/home/rizky/k21_robocon2022/build/k21_controller/cmake_install.cmake")
+  include("/home/rizky/k21_robocon2022/build/k21_controller_r1/cmake_install.cmake")
 
 endif()
 

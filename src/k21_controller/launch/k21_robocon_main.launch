@@ -1,13 +1,14 @@
 <launch>
-    <node pkg="rosserial_python" type="serial_node.py" name="slave_mega" output="screen">
+    <!-- <node pkg="rosserial_python" type="serial_node.py" name="slave_mega" output="screen">
         <param name="port" value="/dev/ttyUSB1"/>
         <param name="baud" value="115200"/>
     </node>
     <node pkg="rosserial_python" type="serial_node.py" name="slave_nano" output="screen">
         <param name="port" value="/dev/ttyUSB0"/>
         <param name="baud" value="115200"/>
-    </node>
-    <node pkg="k21_controller" namne="lifter_node" type="lifter" output="screen"/>
-    <node pkg="k21_controller" namne="k21_joyNode" type="k21_joyNode" output="screen"/>
-    <node pkg="k21_controller" namne="gripper_lagori" type="gripper_lagori" output="screen"/>
+    </node> -->
+    <node pkg="k21_controller" name="k21_lifter" type="k21_lifter" output="screen"/>
+    <node pkg="k21_controller" name="k21_joyNode" type="k21_joyNode" output="screen"/>
+    <node pkg="k21_controller" name="k21_gripper" type="k21_gripper" output="screen"/>
+    <node pkg="k21_controller" name="k21_gripper_bola" type="k21_gripper_bola" output="screen"/>
 </launch>

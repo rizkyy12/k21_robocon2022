@@ -55,12 +55,14 @@ CMAKE_BINARY_DIR = /home/rizky/k21_robocon2022/build
 # The main recursive "all" target.
 all: gtest/all
 all: k21_controller/all
+all: k21_controller_r1/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: k21_controller/preinstall
+preinstall: k21_controller_r1/preinstall
 
 .PHONY : preinstall
 
@@ -72,6 +74,7 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: k21_controller/clean
+clean: k21_controller_r1/clean
 
 .PHONY : clean
 
@@ -195,6 +198,24 @@ k21_controller/clean: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_
 k21_controller/clean: k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/clean
 
 .PHONY : k21_controller/clean
+
+#=============================================================================
+# Directory level rules for directory k21_controller_r1
+
+# Recursive "all" directory target.
+k21_controller_r1/all:
+
+.PHONY : k21_controller_r1/all
+
+# Recursive "preinstall" directory target.
+k21_controller_r1/preinstall:
+
+.PHONY : k21_controller_r1/preinstall
+
+# Recursive "clean" directory target.
+k21_controller_r1/clean:
+
+.PHONY : k21_controller_r1/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir

@@ -458,6 +458,12 @@ k21_controller_BINARY_DIR:STATIC=/home/rizky/k21_robocon2022/build/k21_controlle
 //Value Computed by CMake
 k21_controller_SOURCE_DIR:STATIC=/home/rizky/k21_robocon2022/src/k21_controller
 
+//Value Computed by CMake
+k21_controller_r1_BINARY_DIR:STATIC=/home/rizky/k21_robocon2022/build/k21_controller_r1
+
+//Value Computed by CMake
+k21_controller_r1_SOURCE_DIR:STATIC=/home/rizky/k21_robocon2022/src/k21_controller_r1
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/noetic/lib/libxmlrpcpp.so
 
@@ -642,7 +648,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
