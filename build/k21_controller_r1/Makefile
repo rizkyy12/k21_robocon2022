@@ -167,6 +167,48 @@ depend:
 	cd /home/rizky/k21_robocon2022/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+k21_controller_r1/CMakeFiles/k21_servo.dir/rule:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_servo.dir/rule
+.PHONY : k21_controller_r1/CMakeFiles/k21_servo.dir/rule
+
+# Convenience name for target.
+k21_servo: k21_controller_r1/CMakeFiles/k21_servo.dir/rule
+
+.PHONY : k21_servo
+
+# fast build rule for target.
+k21_servo/fast:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/build
+.PHONY : k21_servo/fast
+
+src/k21_servoR1.o: src/k21_servoR1.cpp.o
+
+.PHONY : src/k21_servoR1.o
+
+# target to build an object file
+src/k21_servoR1.cpp.o:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/src/k21_servoR1.cpp.o
+.PHONY : src/k21_servoR1.cpp.o
+
+src/k21_servoR1.i: src/k21_servoR1.cpp.i
+
+.PHONY : src/k21_servoR1.i
+
+# target to preprocess a source file
+src/k21_servoR1.cpp.i:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/src/k21_servoR1.cpp.i
+.PHONY : src/k21_servoR1.cpp.i
+
+src/k21_servoR1.s: src/k21_servoR1.cpp.s
+
+.PHONY : src/k21_servoR1.s
+
+# target to generate assembly for a file
+src/k21_servoR1.cpp.s:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/src/k21_servoR1.cpp.s
+.PHONY : src/k21_servoR1.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -180,6 +222,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... k21_servo"
+	@echo "... src/k21_servoR1.o"
+	@echo "... src/k21_servoR1.i"
+	@echo "... src/k21_servoR1.s"
 .PHONY : help
 
 

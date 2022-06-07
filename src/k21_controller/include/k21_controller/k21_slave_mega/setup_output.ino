@@ -21,5 +21,6 @@ void setup_output(){
 
   pinMode(R_PWM_LIFTER, OUTPUT);
   pinMode(L_PWM_LIFTER, OUTPUT);
+  pinMode(CH1, OUTPUT);
   
 }

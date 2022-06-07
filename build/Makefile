@@ -804,6 +804,19 @@ k21_controller_generate_messages_eus/fast:
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/build
 .PHONY : k21_controller_generate_messages_eus/fast
 
+#=============================================================================
+# Target rules for targets named k21_servo
+
+# Build rule for target.
+k21_servo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k21_servo
+.PHONY : k21_servo
+
+# fast build rule for target.
+k21_servo/fast:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/build
+.PHONY : k21_servo/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -866,6 +879,7 @@ help:
 	@echo "... k21_main"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... k21_controller_generate_messages_eus"
+	@echo "... k21_servo"
 .PHONY : help
 
 

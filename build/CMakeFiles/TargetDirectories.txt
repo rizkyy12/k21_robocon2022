@@ -89,3 +89,4 @@
 /home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/rebuild_cache.dir
 /home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/edit_cache.dir
 /home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/test.dir
+/home/rizky/k21_robocon2022/build/k21_controller_r1/CMakeFiles/k21_servo.dir

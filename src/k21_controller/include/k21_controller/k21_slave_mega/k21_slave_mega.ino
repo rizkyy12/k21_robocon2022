@@ -4,6 +4,7 @@
 #include <ros.h>
 #include <geometry_msgs/Twist.h>
 #include <std_msgs/Float64.h>
+#include <std_msgs/Int32.h>
 // -----------------------------------------------------------
 #include <util/atomic.h>
 #include <config_k21.h>
@@ -14,6 +15,7 @@
 
 #define R_PWM_LIFTER 5
 #define L_PWM_LIFTER 4
+#define CH1 47
 
 float maxRpm = 475;
 float ppr = 7;
@@ -35,10 +37,19 @@ ros::NodeHandle nh;
 
 // ======================== ROS =======================
 // Lifter
-void lifterCb(const std_msgs::Float64 &msg_lifter){
+void lifterCb(const std_msgs::Float64 &msg_lifter) {
   output = msg_lifter.data;
 }
-
+// Gripper Bola
+void relayCb(const std_msgs::Int32 &msg_relay) {
+  int out_relay = msg_relay.data;
+  if (out_relay == 1) {
+    digitalWrite(CH1, HIGH);
+  }
+  else {
+    digitalWrite(CH1, LOW);
+  }
+}
 // ======================== ROS =======================
 void messageCb(const geometry_msgs::Twist& msg) {
   Vx = msg.linear.x;
@@ -68,12 +79,12 @@ void messageCb(const geometry_msgs::Twist& msg) {
   else if (w == 1) {
     Vx = 0;
     Vy = 0;
-    w = -620;
+    w = 620;
   }
   else if (w == -1) {
     Vx = 0;
     Vy = 0;
-    w = 620;
+    w = -620;
   }
   else if (Vx == 1 && Vy == 1) {
     Vx = 620;
@@ -104,19 +115,23 @@ void messageCb(const geometry_msgs::Twist& msg) {
 
 // ==================================== Subscribe For /cmd vel ==================================
 ros::Subscriber<geometry_msgs::Twist> sub_cmdVel("/cmd_vel", messageCb);
-// ========================================== Ended ROS =========================================
+// ==============================================================================================
 // ==================================== Subscribe For /lifter ===================================
 ros::Subscriber<std_msgs::Float64> sub_lifter("/lifter", lifterCb);
 // ==============================================================================================
+// ==================================== Subscribe For /relay ====================================
+ros::Subscriber<std_msgs::Int32> sub_relay("/value_relay", relayCb);
+// ==============================================================================================
+
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
   setup_output();
   // =========================== PID Parameters =============================
-  Kp = 0.004221;  //0.01021 //parameters Proportional
-  Ti = 8.957;   //8.057     //parameters Integral
-  Td = 2.11;   //1.071     //parameters Derivative
+  Kp = 0.008221;  //0.01021 //parameters Proportional
+  Ti = 3.957;   //8.057     //parameters Integral
+  Td = 0.11;   //1.071     //parameters Derivative
 
   // --> Menghitung Ki
   if (Ti == 0) {
@@ -148,12 +163,13 @@ void setup() {
   // ======================== ROS Subs =========================
   nh.subscribe(sub_cmdVel);
   nh.subscribe(sub_lifter);
+  nh.subscribe(sub_relay);
   // ===================== Ended ROS Advertise & Subs ======================
   t1 = millis();
   t2 = millis();
   t3 = millis();
   t4 = millis();
-  
+
   delay(10);
 }
 
@@ -191,7 +207,6 @@ void loop() {
   }
   //lifter
   OutPwm(output);
-  
+
   nh.spinOnce();
-  delay(100);
 }

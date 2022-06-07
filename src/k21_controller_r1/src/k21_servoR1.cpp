@@ -29,6 +29,9 @@ void servoCb(const sensor_msgs::Joy &msg){
         servo2_data.data = 0;
         servo3_data.data = 0;
     }
+    servo1.publish(servo1_data);
+    servo2.publish(servo2_data);
+    servo3.publish(servo3_data);
 }
 
 int main(int argc, char **argv){
