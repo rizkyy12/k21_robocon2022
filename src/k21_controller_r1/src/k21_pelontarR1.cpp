@@ -8,13 +8,13 @@ ros::Subscriber joy;
 void pelontarCb(const sensor_msgs::Joy &msg){
     std_msgs::Float64 pelontar;
 
-    if(msg.buttons[4] == 1){
-        pelontar.data = 120;
+    if(msg.buttons[3] == 1){
+        pelontar.data = 1;
     }
     else{
         pelontar.data = 0;
     }
-    ROS_INFO("V Pelontar: %f", pelontar.data);
+
     pelontar_pub.publish(pelontar);
 }
 

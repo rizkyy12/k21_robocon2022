@@ -23,7 +23,7 @@ int main(int argc, char **argv){
     ros::init(argc, argv, "gripper_lagori");
     ros::NodeHandle nh;
     gripper_pub = nh.advertise<std_msgs::Float64>("/gripper_lagori", 100);
-    joy = nh.subscribe("/joy", 1000, gripperCb);
+    joy = nh.subscribe("/joy_r2", 1000, gripperCb);
     ros::spin();
     return 0;
 }

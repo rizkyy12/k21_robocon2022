@@ -489,3 +489,17 @@ make[1]: Leaving directory '/home/rizky/k21_robocon2022/build/CMakeFiles/CMakeTm
 
 
 
+Determining if files linux/joystick.h exist passed with the following output:
+Change Dir: /home/rizky/k21_robocon2022/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c357e/fast && /usr/bin/make -f CMakeFiles/cmTC_c357e.dir/build.make CMakeFiles/cmTC_c357e.dir/build
+make[1]: Entering directory '/home/rizky/k21_robocon2022/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c357e.dir/HAVE_LINUX_JOYSTICK_H.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_c357e.dir/HAVE_LINUX_JOYSTICK_H.c.o   -c /home/rizky/k21_robocon2022/build/CMakeFiles/CheckIncludeFiles/HAVE_LINUX_JOYSTICK_H.c
+Linking C executable cmTC_c357e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c357e.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_c357e.dir/HAVE_LINUX_JOYSTICK_H.c.o  -o cmTC_c357e 
+make[1]: Leaving directory '/home/rizky/k21_robocon2022/build/CMakeFiles/CMakeTmp'
+
+
+

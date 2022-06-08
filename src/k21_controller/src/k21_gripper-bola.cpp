@@ -24,7 +24,7 @@ int main(int argc, char **argv){
     ros::init(argc, argv, "relay_node");
     ros::NodeHandle nh;
     relay_pub = nh.advertise<std_msgs::Int32>("/relay", 100);
-    joy = nh.subscribe("/joy", 1000, relayCb);
+    joy = nh.subscribe("/joy_r2", 1000, relayCb);
     ros::spin();
     return 0;
 }

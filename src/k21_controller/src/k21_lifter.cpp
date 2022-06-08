@@ -22,7 +22,7 @@ int main(int argc, char **argv){
     ros::init(argc, argv, "lifter_node");
     ros::NodeHandle nh;
     lifter_pub = nh.advertise<std_msgs::Float64>("/lifter", 100);
-    joy = nh.subscribe("/joy", 1000, lifterCb);
+    joy = nh.subscribe("/joy_r2", 1000, lifterCb);
     ros::spin();
     return 0;
 }

@@ -10,7 +10,7 @@ class K21JoyNode{
     public:
         K21JoyNode(ros::NodeHandle *nh){
             vel_pub = nh->advertise<geometry_msgs::Twist>("/cmd_vel", 10);
-            joy = nh->subscribe("/joy", 10, &K21JoyNode::joyCb, this);
+            joy = nh->subscribe("/joy_r2", 10, &K21JoyNode::joyCb, this);
         }
         void joyCb(const sensor_msgs::Joy::ConstPtr& joy){
             geometry_msgs::Twist twist;

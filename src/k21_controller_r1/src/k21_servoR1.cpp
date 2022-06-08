@@ -18,17 +18,17 @@ void servoCb(const sensor_msgs::Joy &msg){
     if(msg.buttons[4] == 1){
         servodepan_data.data = 90;
     }
-    else if(msg.buttons[1] == 1){
-        servokiri_data.data = 90;
-    }
-    else if (msg.buttons[2] == 1){
+    else if(msg.buttons[2] == 1){
         servokanan_data.data = 90;
     }
-    else{
-        servokanan_data.data = 0;
-        servokiri_data.data = 0;
-        servodepan_data.data = 0;
+    else if (msg.buttons[1] == 1){
+        servokiri_data.data = 90;
     }
+    // else{
+    //     servokanan_data.data = 0;
+    //     servokiri_data.data = 0;
+    //     servodepan_data.data = 0;
+    // }
 
     servokanan.publish(servokanan_data);
     servokiri.publish(servokiri_data);

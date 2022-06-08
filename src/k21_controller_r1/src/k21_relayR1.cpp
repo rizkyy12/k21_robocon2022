@@ -7,7 +7,7 @@ ros::Subscriber joy;
 
 void relayCb(const sensor_msgs::Joy &msg){
     std_msgs::Int32 relay;
-
+    
     if(msg.buttons[0] == 1){
         relay.data = 1;
         ROS_INFO("[HIGH]");

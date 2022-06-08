@@ -23,7 +23,7 @@ class K21JoyNode{
 };
 
 int main(int argc, char** argv){
-    ros::init(argc, argv, "k21_joyNode");
+    ros::init(argc, argv, "k21_joyR1");
     ros::NodeHandle nh;
     K21JoyNode k21_joynode = K21JoyNode(&nh);
     ros::spin();

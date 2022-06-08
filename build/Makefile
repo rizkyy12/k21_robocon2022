@@ -805,17 +805,329 @@ k21_controller_generate_messages_eus/fast:
 .PHONY : k21_controller_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named k21_servo
+# Target rules for targets named k21_adjusterR1
 
 # Build rule for target.
-k21_servo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 k21_servo
-.PHONY : k21_servo
+k21_adjusterR1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k21_adjusterR1
+.PHONY : k21_adjusterR1
 
 # fast build rule for target.
-k21_servo/fast:
-	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/build
-.PHONY : k21_servo/fast
+k21_adjusterR1/fast:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build.make k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build
+.PHONY : k21_adjusterR1/fast
+
+#=============================================================================
+# Target rules for targets named k21_relayR1
+
+# Build rule for target.
+k21_relayR1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k21_relayR1
+.PHONY : k21_relayR1
+
+# fast build rule for target.
+k21_relayR1/fast:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_relayR1.dir/build.make k21_controller_r1/CMakeFiles/k21_relayR1.dir/build
+.PHONY : k21_relayR1/fast
+
+#=============================================================================
+# Target rules for targets named k21_pelontarR1
+
+# Build rule for target.
+k21_pelontarR1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k21_pelontarR1
+.PHONY : k21_pelontarR1
+
+# fast build rule for target.
+k21_pelontarR1/fast:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build.make k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build
+.PHONY : k21_pelontarR1/fast
+
+#=============================================================================
+# Target rules for targets named k21_joyR1
+
+# Build rule for target.
+k21_joyR1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k21_joyR1
+.PHONY : k21_joyR1
+
+# fast build rule for target.
+k21_joyR1/fast:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_joyR1.dir/build.make k21_controller_r1/CMakeFiles/k21_joyR1.dir/build
+.PHONY : k21_joyR1/fast
+
+#=============================================================================
+# Target rules for targets named k21_servoR1
+
+# Build rule for target.
+k21_servoR1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 k21_servoR1
+.PHONY : k21_servoR1
+
+# fast build rule for target.
+k21_servoR1/fast:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_servoR1.dir/build.make k21_controller_r1/CMakeFiles/k21_servoR1.dir/build
+.PHONY : k21_servoR1/fast
+
+#=============================================================================
+# Target rules for targets named joy_node
+
+# Build rule for target.
+joy_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 joy_node
+.PHONY : joy_node
+
+# fast build rule for target.
+joy_node/fast:
+	$(MAKE) -f joy/CMakeFiles/joy_node.dir/build.make joy/CMakeFiles/joy_node.dir/build
+.PHONY : joy_node/fast
+
+#=============================================================================
+# Target rules for targets named clean_test_results_joy
+
+# Build rule for target.
+clean_test_results_joy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_joy
+.PHONY : clean_test_results_joy
+
+# fast build rule for target.
+clean_test_results_joy/fast:
+	$(MAKE) -f joy/CMakeFiles/clean_test_results_joy.dir/build.make joy/CMakeFiles/clean_test_results_joy.dir/build
+.PHONY : clean_test_results_joy/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_joy_roslint_package
+
+# Build rule for target.
+_run_tests_joy_roslint_package: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_joy_roslint_package
+.PHONY : _run_tests_joy_roslint_package
+
+# fast build rule for target.
+_run_tests_joy_roslint_package/fast:
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy_roslint_package.dir/build.make joy/CMakeFiles/_run_tests_joy_roslint_package.dir/build
+.PHONY : _run_tests_joy_roslint_package/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_joy_roslint_package
+
+# Build rule for target.
+run_tests_joy_roslint_package: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_joy_roslint_package
+.PHONY : run_tests_joy_roslint_package
+
+# fast build rule for target.
+run_tests_joy_roslint_package/fast:
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy_roslint_package.dir/build.make joy/CMakeFiles/run_tests_joy_roslint_package.dir/build
+.PHONY : run_tests_joy_roslint_package/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_joy_roslint
+
+# Build rule for target.
+_run_tests_joy_roslint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_joy_roslint
+.PHONY : _run_tests_joy_roslint
+
+# fast build rule for target.
+_run_tests_joy_roslint/fast:
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy_roslint.dir/build.make joy/CMakeFiles/_run_tests_joy_roslint.dir/build
+.PHONY : _run_tests_joy_roslint/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_joy
+
+# Build rule for target.
+_run_tests_joy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_joy
+.PHONY : _run_tests_joy
+
+# fast build rule for target.
+_run_tests_joy/fast:
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy.dir/build.make joy/CMakeFiles/_run_tests_joy.dir/build
+.PHONY : _run_tests_joy/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_cpp
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_cpp
+.PHONY : diagnostic_msgs_generate_messages_cpp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_nodejs
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_nodejs
+.PHONY : diagnostic_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
+.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_joy_roslint
+
+# Build rule for target.
+run_tests_joy_roslint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_joy_roslint
+.PHONY : run_tests_joy_roslint
+
+# fast build rule for target.
+run_tests_joy_roslint/fast:
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy_roslint.dir/build.make joy/CMakeFiles/run_tests_joy_roslint.dir/build
+.PHONY : run_tests_joy_roslint/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_eus
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_eus
+.PHONY : diagnostic_msgs_generate_messages_eus
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_eus/fast:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
+.PHONY : diagnostic_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_cpp
+
+# Build rule for target.
+sensor_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+.PHONY : sensor_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_lisp
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_lisp
+.PHONY : diagnostic_msgs_generate_messages_lisp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named diagnostic_msgs_generate_messages_py
+
+# Build rule for target.
+diagnostic_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 diagnostic_msgs_generate_messages_py
+.PHONY : diagnostic_msgs_generate_messages_py
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_py/fast:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+.PHONY : diagnostic_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_eus
+
+# Build rule for target.
+sensor_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_eus
+.PHONY : sensor_msgs_generate_messages_eus
+
+# fast build rule for target.
+sensor_msgs_generate_messages_eus/fast:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+.PHONY : sensor_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_joy
+
+# Build rule for target.
+run_tests_joy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_joy
+.PHONY : run_tests_joy
+
+# fast build rule for target.
+run_tests_joy/fast:
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy.dir/build.make joy/CMakeFiles/run_tests_joy.dir/build
+.PHONY : run_tests_joy/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_lisp
+
+# Build rule for target.
+sensor_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# fast build rule for target.
+sensor_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+.PHONY : sensor_msgs_generate_messages_lisp/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_nodejs
+
+# Build rule for target.
+sensor_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+sensor_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+.PHONY : sensor_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named sensor_msgs_generate_messages_py
+
+# Build rule for target.
+sensor_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sensor_msgs_generate_messages_py
+.PHONY : sensor_msgs_generate_messages_py
+
+# fast build rule for target.
+sensor_msgs_generate_messages_py/fast:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+.PHONY : sensor_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named roslint
+
+# Build rule for target.
+roslint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roslint
+.PHONY : roslint
+
+# fast build rule for target.
+roslint/fast:
+	$(MAKE) -f joy/CMakeFiles/roslint.dir/build.make joy/CMakeFiles/roslint.dir/build
+.PHONY : roslint/fast
+
+#=============================================================================
+# Target rules for targets named roslint_joy
+
+# Build rule for target.
+roslint_joy: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 roslint_joy
+.PHONY : roslint_joy
+
+# fast build rule for target.
+roslint_joy/fast:
+	$(MAKE) -f joy/CMakeFiles/roslint_joy.dir/build.make joy/CMakeFiles/roslint_joy.dir/build
+.PHONY : roslint_joy/fast
 
 # Help Target
 help:
@@ -879,7 +1191,31 @@ help:
 	@echo "... k21_main"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... k21_controller_generate_messages_eus"
-	@echo "... k21_servo"
+	@echo "... k21_adjusterR1"
+	@echo "... k21_relayR1"
+	@echo "... k21_pelontarR1"
+	@echo "... k21_joyR1"
+	@echo "... k21_servoR1"
+	@echo "... joy_node"
+	@echo "... clean_test_results_joy"
+	@echo "... _run_tests_joy_roslint_package"
+	@echo "... run_tests_joy_roslint_package"
+	@echo "... _run_tests_joy_roslint"
+	@echo "... _run_tests_joy"
+	@echo "... diagnostic_msgs_generate_messages_cpp"
+	@echo "... diagnostic_msgs_generate_messages_nodejs"
+	@echo "... run_tests_joy_roslint"
+	@echo "... diagnostic_msgs_generate_messages_eus"
+	@echo "... sensor_msgs_generate_messages_cpp"
+	@echo "... diagnostic_msgs_generate_messages_lisp"
+	@echo "... diagnostic_msgs_generate_messages_py"
+	@echo "... sensor_msgs_generate_messages_eus"
+	@echo "... run_tests_joy"
+	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... sensor_msgs_generate_messages_nodejs"
+	@echo "... sensor_msgs_generate_messages_py"
+	@echo "... roslint"
+	@echo "... roslint_joy"
 .PHONY : help
 
 

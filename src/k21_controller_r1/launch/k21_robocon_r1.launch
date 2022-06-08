@@ -1,0 +1,15 @@
+<launch>
+    <!-- <node pkg="rosserial_python" type="serial_node.py" name="slave_mega" output="screen">
+        <param name="port" value="/dev/ttyUSB1"/>
+        <param name="baud" value="115200"/>
+    </node>
+    <node pkg="rosserial_python" type="serial_node.py" name="slave_nano" output="screen">
+        <param name="port" value="/dev/ttyUSB0"/>
+        <param name="baud" value="115200"/>
+    </node> -->
+    <node pkg="k21_controller_r1" name="k21_adjusterR1" type="k21_adjusterR1" output="screen"/>
+    <node pkg="k21_controller_r1" name="k21_joyR1" type="k21_joyR1" output="screen"/>
+    <node pkg="k21_controller_r1" name="k21_pelontarR1" type="k21_pelontarR1" output="screen"/>
+    <node pkg="k21_controller_r1" name="k21_servoR1" type="k21_servoR1" output="screen"/>
+    <node pkg="k21_controller_r1" name="k21_relayR1" type="k21_relayR1" output="screen"/>
+</launch>

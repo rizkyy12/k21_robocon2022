@@ -7,3 +7,4 @@
 subdirs("gtest")
 subdirs("k21_controller")
 subdirs("k21_controller_r1")
+subdirs("joy")

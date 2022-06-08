@@ -168,19 +168,187 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-k21_controller_r1/CMakeFiles/k21_servo.dir/rule:
-	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_servo.dir/rule
-.PHONY : k21_controller_r1/CMakeFiles/k21_servo.dir/rule
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/rule:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/rule
+.PHONY : k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/rule
 
 # Convenience name for target.
-k21_servo: k21_controller_r1/CMakeFiles/k21_servo.dir/rule
+k21_adjusterR1: k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/rule
 
-.PHONY : k21_servo
+.PHONY : k21_adjusterR1
 
 # fast build rule for target.
-k21_servo/fast:
-	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/build
-.PHONY : k21_servo/fast
+k21_adjusterR1/fast:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build.make k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build
+.PHONY : k21_adjusterR1/fast
+
+# Convenience name for target.
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/rule:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_relayR1.dir/rule
+.PHONY : k21_controller_r1/CMakeFiles/k21_relayR1.dir/rule
+
+# Convenience name for target.
+k21_relayR1: k21_controller_r1/CMakeFiles/k21_relayR1.dir/rule
+
+.PHONY : k21_relayR1
+
+# fast build rule for target.
+k21_relayR1/fast:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_relayR1.dir/build.make k21_controller_r1/CMakeFiles/k21_relayR1.dir/build
+.PHONY : k21_relayR1/fast
+
+# Convenience name for target.
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/rule:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/rule
+.PHONY : k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/rule
+
+# Convenience name for target.
+k21_pelontarR1: k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/rule
+
+.PHONY : k21_pelontarR1
+
+# fast build rule for target.
+k21_pelontarR1/fast:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build.make k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build
+.PHONY : k21_pelontarR1/fast
+
+# Convenience name for target.
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/rule:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_joyR1.dir/rule
+.PHONY : k21_controller_r1/CMakeFiles/k21_joyR1.dir/rule
+
+# Convenience name for target.
+k21_joyR1: k21_controller_r1/CMakeFiles/k21_joyR1.dir/rule
+
+.PHONY : k21_joyR1
+
+# fast build rule for target.
+k21_joyR1/fast:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_joyR1.dir/build.make k21_controller_r1/CMakeFiles/k21_joyR1.dir/build
+.PHONY : k21_joyR1/fast
+
+# Convenience name for target.
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/rule:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_servoR1.dir/rule
+.PHONY : k21_controller_r1/CMakeFiles/k21_servoR1.dir/rule
+
+# Convenience name for target.
+k21_servoR1: k21_controller_r1/CMakeFiles/k21_servoR1.dir/rule
+
+.PHONY : k21_servoR1
+
+# fast build rule for target.
+k21_servoR1/fast:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servoR1.dir/build.make k21_controller_r1/CMakeFiles/k21_servoR1.dir/build
+.PHONY : k21_servoR1/fast
+
+src/k21_adjusterR1.o: src/k21_adjusterR1.cpp.o
+
+.PHONY : src/k21_adjusterR1.o
+
+# target to build an object file
+src/k21_adjusterR1.cpp.o:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build.make k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/src/k21_adjusterR1.cpp.o
+.PHONY : src/k21_adjusterR1.cpp.o
+
+src/k21_adjusterR1.i: src/k21_adjusterR1.cpp.i
+
+.PHONY : src/k21_adjusterR1.i
+
+# target to preprocess a source file
+src/k21_adjusterR1.cpp.i:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build.make k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/src/k21_adjusterR1.cpp.i
+.PHONY : src/k21_adjusterR1.cpp.i
+
+src/k21_adjusterR1.s: src/k21_adjusterR1.cpp.s
+
+.PHONY : src/k21_adjusterR1.s
+
+# target to generate assembly for a file
+src/k21_adjusterR1.cpp.s:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build.make k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/src/k21_adjusterR1.cpp.s
+.PHONY : src/k21_adjusterR1.cpp.s
+
+src/k21_joyR1.o: src/k21_joyR1.cpp.o
+
+.PHONY : src/k21_joyR1.o
+
+# target to build an object file
+src/k21_joyR1.cpp.o:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_joyR1.dir/build.make k21_controller_r1/CMakeFiles/k21_joyR1.dir/src/k21_joyR1.cpp.o
+.PHONY : src/k21_joyR1.cpp.o
+
+src/k21_joyR1.i: src/k21_joyR1.cpp.i
+
+.PHONY : src/k21_joyR1.i
+
+# target to preprocess a source file
+src/k21_joyR1.cpp.i:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_joyR1.dir/build.make k21_controller_r1/CMakeFiles/k21_joyR1.dir/src/k21_joyR1.cpp.i
+.PHONY : src/k21_joyR1.cpp.i
+
+src/k21_joyR1.s: src/k21_joyR1.cpp.s
+
+.PHONY : src/k21_joyR1.s
+
+# target to generate assembly for a file
+src/k21_joyR1.cpp.s:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_joyR1.dir/build.make k21_controller_r1/CMakeFiles/k21_joyR1.dir/src/k21_joyR1.cpp.s
+.PHONY : src/k21_joyR1.cpp.s
+
+src/k21_pelontarR1.o: src/k21_pelontarR1.cpp.o
+
+.PHONY : src/k21_pelontarR1.o
+
+# target to build an object file
+src/k21_pelontarR1.cpp.o:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build.make k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/src/k21_pelontarR1.cpp.o
+.PHONY : src/k21_pelontarR1.cpp.o
+
+src/k21_pelontarR1.i: src/k21_pelontarR1.cpp.i
+
+.PHONY : src/k21_pelontarR1.i
+
+# target to preprocess a source file
+src/k21_pelontarR1.cpp.i:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build.make k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/src/k21_pelontarR1.cpp.i
+.PHONY : src/k21_pelontarR1.cpp.i
+
+src/k21_pelontarR1.s: src/k21_pelontarR1.cpp.s
+
+.PHONY : src/k21_pelontarR1.s
+
+# target to generate assembly for a file
+src/k21_pelontarR1.cpp.s:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build.make k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/src/k21_pelontarR1.cpp.s
+.PHONY : src/k21_pelontarR1.cpp.s
+
+src/k21_relayR1.o: src/k21_relayR1.cpp.o
+
+.PHONY : src/k21_relayR1.o
+
+# target to build an object file
+src/k21_relayR1.cpp.o:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_relayR1.dir/build.make k21_controller_r1/CMakeFiles/k21_relayR1.dir/src/k21_relayR1.cpp.o
+.PHONY : src/k21_relayR1.cpp.o
+
+src/k21_relayR1.i: src/k21_relayR1.cpp.i
+
+.PHONY : src/k21_relayR1.i
+
+# target to preprocess a source file
+src/k21_relayR1.cpp.i:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_relayR1.dir/build.make k21_controller_r1/CMakeFiles/k21_relayR1.dir/src/k21_relayR1.cpp.i
+.PHONY : src/k21_relayR1.cpp.i
+
+src/k21_relayR1.s: src/k21_relayR1.cpp.s
+
+.PHONY : src/k21_relayR1.s
+
+# target to generate assembly for a file
+src/k21_relayR1.cpp.s:
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_relayR1.dir/build.make k21_controller_r1/CMakeFiles/k21_relayR1.dir/src/k21_relayR1.cpp.s
+.PHONY : src/k21_relayR1.cpp.s
 
 src/k21_servoR1.o: src/k21_servoR1.cpp.o
 
@@ -188,7 +356,7 @@ src/k21_servoR1.o: src/k21_servoR1.cpp.o
 
 # target to build an object file
 src/k21_servoR1.cpp.o:
-	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/src/k21_servoR1.cpp.o
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servoR1.dir/build.make k21_controller_r1/CMakeFiles/k21_servoR1.dir/src/k21_servoR1.cpp.o
 .PHONY : src/k21_servoR1.cpp.o
 
 src/k21_servoR1.i: src/k21_servoR1.cpp.i
@@ -197,7 +365,7 @@ src/k21_servoR1.i: src/k21_servoR1.cpp.i
 
 # target to preprocess a source file
 src/k21_servoR1.cpp.i:
-	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/src/k21_servoR1.cpp.i
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servoR1.dir/build.make k21_controller_r1/CMakeFiles/k21_servoR1.dir/src/k21_servoR1.cpp.i
 .PHONY : src/k21_servoR1.cpp.i
 
 src/k21_servoR1.s: src/k21_servoR1.cpp.s
@@ -206,7 +374,7 @@ src/k21_servoR1.s: src/k21_servoR1.cpp.s
 
 # target to generate assembly for a file
 src/k21_servoR1.cpp.s:
-	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/src/k21_servoR1.cpp.s
+	cd /home/rizky/k21_robocon2022/build && $(MAKE) -f k21_controller_r1/CMakeFiles/k21_servoR1.dir/build.make k21_controller_r1/CMakeFiles/k21_servoR1.dir/src/k21_servoR1.cpp.s
 .PHONY : src/k21_servoR1.cpp.s
 
 # Help Target
@@ -222,7 +390,23 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... k21_servo"
+	@echo "... k21_adjusterR1"
+	@echo "... k21_relayR1"
+	@echo "... k21_pelontarR1"
+	@echo "... k21_joyR1"
+	@echo "... k21_servoR1"
+	@echo "... src/k21_adjusterR1.o"
+	@echo "... src/k21_adjusterR1.i"
+	@echo "... src/k21_adjusterR1.s"
+	@echo "... src/k21_joyR1.o"
+	@echo "... src/k21_joyR1.i"
+	@echo "... src/k21_joyR1.s"
+	@echo "... src/k21_pelontarR1.o"
+	@echo "... src/k21_pelontarR1.i"
+	@echo "... src/k21_pelontarR1.s"
+	@echo "... src/k21_relayR1.o"
+	@echo "... src/k21_relayR1.i"
+	@echo "... src/k21_relayR1.s"
 	@echo "... src/k21_servoR1.o"
 	@echo "... src/k21_servoR1.i"
 	@echo "... src/k21_servoR1.s"

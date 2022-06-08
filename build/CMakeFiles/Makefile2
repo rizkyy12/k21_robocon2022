@@ -56,6 +56,7 @@ CMAKE_BINARY_DIR = /home/rizky/k21_robocon2022/build
 all: gtest/all
 all: k21_controller/all
 all: k21_controller_r1/all
+all: joy/all
 
 .PHONY : all
 
@@ -63,6 +64,7 @@ all: k21_controller_r1/all
 preinstall: gtest/preinstall
 preinstall: k21_controller/preinstall
 preinstall: k21_controller_r1/preinstall
+preinstall: joy/preinstall
 
 .PHONY : preinstall
 
@@ -75,6 +77,7 @@ clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: k21_controller/clean
 clean: k21_controller_r1/clean
+clean: joy/clean
 
 .PHONY : clean
 
@@ -134,6 +137,43 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest_main.dir/clean
 gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 
 .PHONY : gtest/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory joy
+
+# Recursive "all" directory target.
+joy/all: joy/CMakeFiles/joy_node.dir/all
+
+.PHONY : joy/all
+
+# Recursive "preinstall" directory target.
+joy/preinstall:
+
+.PHONY : joy/preinstall
+
+# Recursive "clean" directory target.
+joy/clean: joy/CMakeFiles/joy_node.dir/clean
+joy/clean: joy/CMakeFiles/clean_test_results_joy.dir/clean
+joy/clean: joy/CMakeFiles/_run_tests_joy_roslint_package.dir/clean
+joy/clean: joy/CMakeFiles/run_tests_joy_roslint_package.dir/clean
+joy/clean: joy/CMakeFiles/_run_tests_joy_roslint.dir/clean
+joy/clean: joy/CMakeFiles/_run_tests_joy.dir/clean
+joy/clean: joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean
+joy/clean: joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
+joy/clean: joy/CMakeFiles/run_tests_joy_roslint.dir/clean
+joy/clean: joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean
+joy/clean: joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+joy/clean: joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean
+joy/clean: joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
+joy/clean: joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+joy/clean: joy/CMakeFiles/run_tests_joy.dir/clean
+joy/clean: joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+joy/clean: joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+joy/clean: joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+joy/clean: joy/CMakeFiles/roslint.dir/clean
+joy/clean: joy/CMakeFiles/roslint_joy.dir/clean
+
+.PHONY : joy/clean
 
 #=============================================================================
 # Directory level rules for directory k21_controller
@@ -203,7 +243,11 @@ k21_controller/clean: k21_controller/CMakeFiles/k21_controller_generate_messages
 # Directory level rules for directory k21_controller_r1
 
 # Recursive "all" directory target.
-k21_controller_r1/all: k21_controller_r1/CMakeFiles/k21_servo.dir/all
+k21_controller_r1/all: k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all
+k21_controller_r1/all: k21_controller_r1/CMakeFiles/k21_relayR1.dir/all
+k21_controller_r1/all: k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all
+k21_controller_r1/all: k21_controller_r1/CMakeFiles/k21_joyR1.dir/all
+k21_controller_r1/all: k21_controller_r1/CMakeFiles/k21_servoR1.dir/all
 
 .PHONY : k21_controller_r1/all
 
@@ -213,7 +257,11 @@ k21_controller_r1/preinstall:
 .PHONY : k21_controller_r1/preinstall
 
 # Recursive "clean" directory target.
-k21_controller_r1/clean: k21_controller_r1/CMakeFiles/k21_servo.dir/clean
+k21_controller_r1/clean: k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/clean
+k21_controller_r1/clean: k21_controller_r1/CMakeFiles/k21_relayR1.dir/clean
+k21_controller_r1/clean: k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/clean
+k21_controller_r1/clean: k21_controller_r1/CMakeFiles/k21_joyR1.dir/clean
+k21_controller_r1/clean: k21_controller_r1/CMakeFiles/k21_servoR1.dir/clean
 
 .PHONY : k21_controller_r1/clean
 
@@ -248,7 +296,7 @@ CMakeFiles/doxygen.dir/clean:
 # Target rules for target CMakeFiles/run_tests.dir
 
 # All Build rule for target.
-CMakeFiles/run_tests.dir/all:
+CMakeFiles/run_tests.dir/all: joy/CMakeFiles/_run_tests_joy.dir/all
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target run_tests"
@@ -492,7 +540,7 @@ k21_controller/CMakeFiles/k21_gripper_bola.dir/all: k21_controller/CMakeFiles/ro
 k21_controller/CMakeFiles/k21_gripper_bola.dir/all: k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_gripper_bola.dir/build.make k21_controller/CMakeFiles/k21_gripper_bola.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_gripper_bola.dir/build.make k21_controller/CMakeFiles/k21_gripper_bola.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=25,26 "Built target k21_gripper_bola"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=29,30 "Built target k21_gripper_bola"
 .PHONY : k21_controller/CMakeFiles/k21_gripper_bola.dir/all
 
 # Build rule for subdir invocation for target.
@@ -543,7 +591,7 @@ k21_controller/CMakeFiles/k21_gripper.dir/all: k21_controller/CMakeFiles/rosgrap
 k21_controller/CMakeFiles/k21_gripper.dir/all: k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_gripper.dir/build.make k21_controller/CMakeFiles/k21_gripper.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_gripper.dir/build.make k21_controller/CMakeFiles/k21_gripper.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=23,24 "Built target k21_gripper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=27,28 "Built target k21_gripper"
 .PHONY : k21_controller/CMakeFiles/k21_gripper.dir/all
 
 # Build rule for subdir invocation for target.
@@ -594,7 +642,7 @@ k21_controller/CMakeFiles/k21_lifter.dir/all: k21_controller/CMakeFiles/rosgraph
 k21_controller/CMakeFiles/k21_lifter.dir/all: k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_lifter.dir/build.make k21_controller/CMakeFiles/k21_lifter.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_lifter.dir/build.make k21_controller/CMakeFiles/k21_lifter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=31,32 "Built target k21_lifter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=37,38 "Built target k21_lifter"
 .PHONY : k21_controller/CMakeFiles/k21_lifter.dir/all
 
 # Build rule for subdir invocation for target.
@@ -645,7 +693,7 @@ k21_controller/CMakeFiles/k21_kinematics.dir/all: k21_controller/CMakeFiles/rosg
 k21_controller/CMakeFiles/k21_kinematics.dir/all: k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_kinematics.dir/build.make k21_controller/CMakeFiles/k21_kinematics.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_kinematics.dir/build.make k21_controller/CMakeFiles/k21_kinematics.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=29,30 "Built target k21_kinematics"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=35,36 "Built target k21_kinematics"
 .PHONY : k21_controller/CMakeFiles/k21_kinematics.dir/all
 
 # Build rule for subdir invocation for target.
@@ -966,7 +1014,7 @@ k21_controller/CMakeFiles/k21_0_loop.dir/all: k21_controller/CMakeFiles/rosgraph
 k21_controller/CMakeFiles/k21_0_loop.dir/all: k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_0_loop.dir/build.make k21_controller/CMakeFiles/k21_0_loop.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_0_loop.dir/build.make k21_controller/CMakeFiles/k21_0_loop.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=9,10 "Built target k21_0_loop"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=11,12 "Built target k21_0_loop"
 .PHONY : k21_controller/CMakeFiles/k21_0_loop.dir/all
 
 # Build rule for subdir invocation for target.
@@ -996,7 +1044,7 @@ k21_controller/CMakeFiles/k21_controller_generate_messages_py.dir/all: k21_contr
 k21_controller/CMakeFiles/k21_controller_generate_messages_py.dir/all: k21_controller/CMakeFiles/_k21_controller_generate_messages_check_deps_Gripper.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_py.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_py.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_py.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=20,21,22 "Built target k21_controller_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=24,25,26 "Built target k21_controller_generate_messages_py"
 .PHONY : k21_controller/CMakeFiles/k21_controller_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1429,7 +1477,7 @@ k21_controller/CMakeFiles/k21_joyNode.dir/all: k21_controller/CMakeFiles/rosgrap
 k21_controller/CMakeFiles/k21_joyNode.dir/all: k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_joyNode.dir/build.make k21_controller/CMakeFiles/k21_joyNode.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_joyNode.dir/build.make k21_controller/CMakeFiles/k21_joyNode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=27,28 "Built target k21_joyNode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=31,32 "Built target k21_joyNode"
 .PHONY : k21_controller/CMakeFiles/k21_joyNode.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1513,7 +1561,7 @@ k21_controller/CMakeFiles/k21_controller_generate_messages_cpp.dir/all: k21_cont
 k21_controller/CMakeFiles/k21_controller_generate_messages_cpp.dir/all: k21_controller/CMakeFiles/_k21_controller_generate_messages_check_deps_Gripper.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_cpp.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_cpp.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_cpp.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=11,12 "Built target k21_controller_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=15,16 "Built target k21_controller_generate_messages_cpp"
 .PHONY : k21_controller/CMakeFiles/k21_controller_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1570,7 +1618,7 @@ k21_controller/CMakeFiles/k21_controller_generate_messages_nodejs.dir/all: k21_c
 k21_controller/CMakeFiles/k21_controller_generate_messages_nodejs.dir/all: k21_controller/CMakeFiles/_k21_controller_generate_messages_check_deps_Gripper.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_nodejs.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_nodejs.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_nodejs.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=18,19 "Built target k21_controller_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=22,23 "Built target k21_controller_generate_messages_nodejs"
 .PHONY : k21_controller/CMakeFiles/k21_controller_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1600,7 +1648,7 @@ k21_controller/CMakeFiles/k21_controller_generate_messages_lisp.dir/all: k21_con
 k21_controller/CMakeFiles/k21_controller_generate_messages_lisp.dir/all: k21_controller/CMakeFiles/_k21_controller_generate_messages_check_deps_Gripper.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_lisp.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_lisp.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_lisp.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=16,17 "Built target k21_controller_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=20,21 "Built target k21_controller_generate_messages_lisp"
 .PHONY : k21_controller/CMakeFiles/k21_controller_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1651,7 +1699,7 @@ k21_controller/CMakeFiles/k21_main.dir/all: k21_controller/CMakeFiles/rosgraph_m
 k21_controller/CMakeFiles/k21_main.dir/all: k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_main.dir/build.make k21_controller/CMakeFiles/k21_main.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_main.dir/build.make k21_controller/CMakeFiles/k21_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=33,34 "Built target k21_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=39,40 "Built target k21_main"
 .PHONY : k21_controller/CMakeFiles/k21_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1708,7 +1756,7 @@ k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all: k21_cont
 k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all: k21_controller/CMakeFiles/_k21_controller_generate_messages_check_deps_Gripper.dir/all
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/depend
 	$(MAKE) -f k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/build.make k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=13,14,15 "Built target k21_controller_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=17,18,19 "Built target k21_controller_generate_messages_eus"
 .PHONY : k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1729,50 +1777,775 @@ k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/clean:
 .PHONY : k21_controller/CMakeFiles/k21_controller_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target k21_controller_r1/CMakeFiles/k21_servo.dir
+# Target rules for target k21_controller_r1/CMakeFiles/k21_adjusterR1.dir
 
 # All Build rule for target.
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_py.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_py.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_eus.dir/all
-k21_controller_r1/CMakeFiles/k21_servo.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
-	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/depend
-	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=35,36 "Built target k21_servo"
-.PHONY : k21_controller_r1/CMakeFiles/k21_servo.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build.make k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/depend
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build.make k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=13,14 "Built target k21_adjusterR1"
+.PHONY : k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all
 
 # Build rule for subdir invocation for target.
-k21_controller_r1/CMakeFiles/k21_servo.dir/rule: cmake_check_build_system
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_servo.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
-.PHONY : k21_controller_r1/CMakeFiles/k21_servo.dir/rule
+.PHONY : k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/rule
 
 # Convenience name for target.
-k21_servo: k21_controller_r1/CMakeFiles/k21_servo.dir/rule
+k21_adjusterR1: k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/rule
 
-.PHONY : k21_servo
+.PHONY : k21_adjusterR1
 
 # clean rule for target.
-k21_controller_r1/CMakeFiles/k21_servo.dir/clean:
-	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_servo.dir/build.make k21_controller_r1/CMakeFiles/k21_servo.dir/clean
-.PHONY : k21_controller_r1/CMakeFiles/k21_servo.dir/clean
+k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/clean:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/build.make k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/clean
+.PHONY : k21_controller_r1/CMakeFiles/k21_adjusterR1.dir/clean
+
+#=============================================================================
+# Target rules for target k21_controller_r1/CMakeFiles/k21_relayR1.dir
+
+# All Build rule for target.
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_relayR1.dir/build.make k21_controller_r1/CMakeFiles/k21_relayR1.dir/depend
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_relayR1.dir/build.make k21_controller_r1/CMakeFiles/k21_relayR1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=43,44 "Built target k21_relayR1"
+.PHONY : k21_controller_r1/CMakeFiles/k21_relayR1.dir/all
+
+# Build rule for subdir invocation for target.
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_relayR1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : k21_controller_r1/CMakeFiles/k21_relayR1.dir/rule
+
+# Convenience name for target.
+k21_relayR1: k21_controller_r1/CMakeFiles/k21_relayR1.dir/rule
+
+.PHONY : k21_relayR1
+
+# clean rule for target.
+k21_controller_r1/CMakeFiles/k21_relayR1.dir/clean:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_relayR1.dir/build.make k21_controller_r1/CMakeFiles/k21_relayR1.dir/clean
+.PHONY : k21_controller_r1/CMakeFiles/k21_relayR1.dir/clean
+
+#=============================================================================
+# Target rules for target k21_controller_r1/CMakeFiles/k21_pelontarR1.dir
+
+# All Build rule for target.
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build.make k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/depend
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build.make k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=41,42 "Built target k21_pelontarR1"
+.PHONY : k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all
+
+# Build rule for subdir invocation for target.
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/rule
+
+# Convenience name for target.
+k21_pelontarR1: k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/rule
+
+.PHONY : k21_pelontarR1
+
+# clean rule for target.
+k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/clean:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/build.make k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/clean
+.PHONY : k21_controller_r1/CMakeFiles/k21_pelontarR1.dir/clean
+
+#=============================================================================
+# Target rules for target k21_controller_r1/CMakeFiles/k21_joyR1.dir
+
+# All Build rule for target.
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_joyR1.dir/build.make k21_controller_r1/CMakeFiles/k21_joyR1.dir/depend
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_joyR1.dir/build.make k21_controller_r1/CMakeFiles/k21_joyR1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=33,34 "Built target k21_joyR1"
+.PHONY : k21_controller_r1/CMakeFiles/k21_joyR1.dir/all
+
+# Build rule for subdir invocation for target.
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_joyR1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : k21_controller_r1/CMakeFiles/k21_joyR1.dir/rule
+
+# Convenience name for target.
+k21_joyR1: k21_controller_r1/CMakeFiles/k21_joyR1.dir/rule
+
+.PHONY : k21_joyR1
+
+# clean rule for target.
+k21_controller_r1/CMakeFiles/k21_joyR1.dir/clean:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_joyR1.dir/build.make k21_controller_r1/CMakeFiles/k21_joyR1.dir/clean
+.PHONY : k21_controller_r1/CMakeFiles/k21_joyR1.dir/clean
+
+#=============================================================================
+# Target rules for target k21_controller_r1/CMakeFiles/k21_servoR1.dir
+
+# All Build rule for target.
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_py.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/roscpp_generate_messages_eus.dir/all
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/all: k21_controller/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_servoR1.dir/build.make k21_controller_r1/CMakeFiles/k21_servoR1.dir/depend
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_servoR1.dir/build.make k21_controller_r1/CMakeFiles/k21_servoR1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=45,46 "Built target k21_servoR1"
+.PHONY : k21_controller_r1/CMakeFiles/k21_servoR1.dir/all
+
+# Build rule for subdir invocation for target.
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 k21_controller_r1/CMakeFiles/k21_servoR1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : k21_controller_r1/CMakeFiles/k21_servoR1.dir/rule
+
+# Convenience name for target.
+k21_servoR1: k21_controller_r1/CMakeFiles/k21_servoR1.dir/rule
+
+.PHONY : k21_servoR1
+
+# clean rule for target.
+k21_controller_r1/CMakeFiles/k21_servoR1.dir/clean:
+	$(MAKE) -f k21_controller_r1/CMakeFiles/k21_servoR1.dir/build.make k21_controller_r1/CMakeFiles/k21_servoR1.dir/clean
+.PHONY : k21_controller_r1/CMakeFiles/k21_servoR1.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/joy_node.dir
+
+# All Build rule for target.
+joy/CMakeFiles/joy_node.dir/all:
+	$(MAKE) -f joy/CMakeFiles/joy_node.dir/build.make joy/CMakeFiles/joy_node.dir/depend
+	$(MAKE) -f joy/CMakeFiles/joy_node.dir/build.make joy/CMakeFiles/joy_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num=9,10 "Built target joy_node"
+.PHONY : joy/CMakeFiles/joy_node.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/joy_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/joy_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/joy_node.dir/rule
+
+# Convenience name for target.
+joy_node: joy/CMakeFiles/joy_node.dir/rule
+
+.PHONY : joy_node
+
+# clean rule for target.
+joy/CMakeFiles/joy_node.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/joy_node.dir/build.make joy/CMakeFiles/joy_node.dir/clean
+.PHONY : joy/CMakeFiles/joy_node.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/clean_test_results_joy.dir
+
+# All Build rule for target.
+joy/CMakeFiles/clean_test_results_joy.dir/all:
+	$(MAKE) -f joy/CMakeFiles/clean_test_results_joy.dir/build.make joy/CMakeFiles/clean_test_results_joy.dir/depend
+	$(MAKE) -f joy/CMakeFiles/clean_test_results_joy.dir/build.make joy/CMakeFiles/clean_test_results_joy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target clean_test_results_joy"
+.PHONY : joy/CMakeFiles/clean_test_results_joy.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/clean_test_results_joy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/clean_test_results_joy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/clean_test_results_joy.dir/rule
+
+# Convenience name for target.
+clean_test_results_joy: joy/CMakeFiles/clean_test_results_joy.dir/rule
+
+.PHONY : clean_test_results_joy
+
+# clean rule for target.
+joy/CMakeFiles/clean_test_results_joy.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/clean_test_results_joy.dir/build.make joy/CMakeFiles/clean_test_results_joy.dir/clean
+.PHONY : joy/CMakeFiles/clean_test_results_joy.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/_run_tests_joy_roslint_package.dir
+
+# All Build rule for target.
+joy/CMakeFiles/_run_tests_joy_roslint_package.dir/all: CMakeFiles/tests.dir/all
+joy/CMakeFiles/_run_tests_joy_roslint_package.dir/all: joy/CMakeFiles/clean_test_results_joy.dir/all
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy_roslint_package.dir/build.make joy/CMakeFiles/_run_tests_joy_roslint_package.dir/depend
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy_roslint_package.dir/build.make joy/CMakeFiles/_run_tests_joy_roslint_package.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target _run_tests_joy_roslint_package"
+.PHONY : joy/CMakeFiles/_run_tests_joy_roslint_package.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/_run_tests_joy_roslint_package.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/_run_tests_joy_roslint_package.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/_run_tests_joy_roslint_package.dir/rule
+
+# Convenience name for target.
+_run_tests_joy_roslint_package: joy/CMakeFiles/_run_tests_joy_roslint_package.dir/rule
+
+.PHONY : _run_tests_joy_roslint_package
+
+# clean rule for target.
+joy/CMakeFiles/_run_tests_joy_roslint_package.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy_roslint_package.dir/build.make joy/CMakeFiles/_run_tests_joy_roslint_package.dir/clean
+.PHONY : joy/CMakeFiles/_run_tests_joy_roslint_package.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/run_tests_joy_roslint_package.dir
+
+# All Build rule for target.
+joy/CMakeFiles/run_tests_joy_roslint_package.dir/all:
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy_roslint_package.dir/build.make joy/CMakeFiles/run_tests_joy_roslint_package.dir/depend
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy_roslint_package.dir/build.make joy/CMakeFiles/run_tests_joy_roslint_package.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target run_tests_joy_roslint_package"
+.PHONY : joy/CMakeFiles/run_tests_joy_roslint_package.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/run_tests_joy_roslint_package.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/run_tests_joy_roslint_package.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/run_tests_joy_roslint_package.dir/rule
+
+# Convenience name for target.
+run_tests_joy_roslint_package: joy/CMakeFiles/run_tests_joy_roslint_package.dir/rule
+
+.PHONY : run_tests_joy_roslint_package
+
+# clean rule for target.
+joy/CMakeFiles/run_tests_joy_roslint_package.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy_roslint_package.dir/build.make joy/CMakeFiles/run_tests_joy_roslint_package.dir/clean
+.PHONY : joy/CMakeFiles/run_tests_joy_roslint_package.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/_run_tests_joy_roslint.dir
+
+# All Build rule for target.
+joy/CMakeFiles/_run_tests_joy_roslint.dir/all: joy/CMakeFiles/_run_tests_joy_roslint_package.dir/all
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy_roslint.dir/build.make joy/CMakeFiles/_run_tests_joy_roslint.dir/depend
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy_roslint.dir/build.make joy/CMakeFiles/_run_tests_joy_roslint.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target _run_tests_joy_roslint"
+.PHONY : joy/CMakeFiles/_run_tests_joy_roslint.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/_run_tests_joy_roslint.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/_run_tests_joy_roslint.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/_run_tests_joy_roslint.dir/rule
+
+# Convenience name for target.
+_run_tests_joy_roslint: joy/CMakeFiles/_run_tests_joy_roslint.dir/rule
+
+.PHONY : _run_tests_joy_roslint
+
+# clean rule for target.
+joy/CMakeFiles/_run_tests_joy_roslint.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy_roslint.dir/build.make joy/CMakeFiles/_run_tests_joy_roslint.dir/clean
+.PHONY : joy/CMakeFiles/_run_tests_joy_roslint.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/_run_tests_joy.dir
+
+# All Build rule for target.
+joy/CMakeFiles/_run_tests_joy.dir/all: joy/CMakeFiles/_run_tests_joy_roslint.dir/all
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy.dir/build.make joy/CMakeFiles/_run_tests_joy.dir/depend
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy.dir/build.make joy/CMakeFiles/_run_tests_joy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target _run_tests_joy"
+.PHONY : joy/CMakeFiles/_run_tests_joy.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/_run_tests_joy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/_run_tests_joy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/_run_tests_joy.dir/rule
+
+# Convenience name for target.
+_run_tests_joy: joy/CMakeFiles/_run_tests_joy.dir/rule
+
+.PHONY : _run_tests_joy
+
+# clean rule for target.
+joy/CMakeFiles/_run_tests_joy.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/_run_tests_joy.dir/build.make joy/CMakeFiles/_run_tests_joy.dir/clean
+.PHONY : joy/CMakeFiles/_run_tests_joy.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_cpp"
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_cpp: joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_cpp
+
+# clean rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_nodejs"
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_nodejs: joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_nodejs
+
+# clean rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/run_tests_joy_roslint.dir
+
+# All Build rule for target.
+joy/CMakeFiles/run_tests_joy_roslint.dir/all: joy/CMakeFiles/run_tests_joy_roslint_package.dir/all
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy_roslint.dir/build.make joy/CMakeFiles/run_tests_joy_roslint.dir/depend
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy_roslint.dir/build.make joy/CMakeFiles/run_tests_joy_roslint.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target run_tests_joy_roslint"
+.PHONY : joy/CMakeFiles/run_tests_joy_roslint.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/run_tests_joy_roslint.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/run_tests_joy_roslint.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/run_tests_joy_roslint.dir/rule
+
+# Convenience name for target.
+run_tests_joy_roslint: joy/CMakeFiles/run_tests_joy_roslint.dir/rule
+
+.PHONY : run_tests_joy_roslint
+
+# clean rule for target.
+joy/CMakeFiles/run_tests_joy_roslint.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy_roslint.dir/build.make joy/CMakeFiles/run_tests_joy_roslint.dir/clean
+.PHONY : joy/CMakeFiles/run_tests_joy_roslint.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_eus"
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_eus: joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_eus
+
+# clean rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_cpp: joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_cpp
+
+# clean rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_lisp"
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_lisp: joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_lisp
+
+# clean rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target diagnostic_msgs_generate_messages_py"
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_py: joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_py
+
+# clean rule for target.
+joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
+.PHONY : joy/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_eus: joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_eus
+
+# clean rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/run_tests_joy.dir
+
+# All Build rule for target.
+joy/CMakeFiles/run_tests_joy.dir/all: joy/CMakeFiles/run_tests_joy_roslint.dir/all
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy.dir/build.make joy/CMakeFiles/run_tests_joy.dir/depend
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy.dir/build.make joy/CMakeFiles/run_tests_joy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target run_tests_joy"
+.PHONY : joy/CMakeFiles/run_tests_joy.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/run_tests_joy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/run_tests_joy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/run_tests_joy.dir/rule
+
+# Convenience name for target.
+run_tests_joy: joy/CMakeFiles/run_tests_joy.dir/rule
+
+.PHONY : run_tests_joy
+
+# clean rule for target.
+joy/CMakeFiles/run_tests_joy.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/run_tests_joy.dir/build.make joy/CMakeFiles/run_tests_joy.dir/clean
+.PHONY : joy/CMakeFiles/run_tests_joy.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_lisp: joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_lisp
+
+# clean rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_nodejs: joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_nodejs
+
+# clean rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/sensor_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+sensor_msgs_generate_messages_py: joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+
+.PHONY : sensor_msgs_generate_messages_py
+
+# clean rule for target.
+joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+.PHONY : joy/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/roslint.dir
+
+# All Build rule for target.
+joy/CMakeFiles/roslint.dir/all: joy/CMakeFiles/roslint_joy.dir/all
+	$(MAKE) -f joy/CMakeFiles/roslint.dir/build.make joy/CMakeFiles/roslint.dir/depend
+	$(MAKE) -f joy/CMakeFiles/roslint.dir/build.make joy/CMakeFiles/roslint.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target roslint"
+.PHONY : joy/CMakeFiles/roslint.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/roslint.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/roslint.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/roslint.dir/rule
+
+# Convenience name for target.
+roslint: joy/CMakeFiles/roslint.dir/rule
+
+.PHONY : roslint
+
+# clean rule for target.
+joy/CMakeFiles/roslint.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/roslint.dir/build.make joy/CMakeFiles/roslint.dir/clean
+.PHONY : joy/CMakeFiles/roslint.dir/clean
+
+#=============================================================================
+# Target rules for target joy/CMakeFiles/roslint_joy.dir
+
+# All Build rule for target.
+joy/CMakeFiles/roslint_joy.dir/all:
+	$(MAKE) -f joy/CMakeFiles/roslint_joy.dir/build.make joy/CMakeFiles/roslint_joy.dir/depend
+	$(MAKE) -f joy/CMakeFiles/roslint_joy.dir/build.make joy/CMakeFiles/roslint_joy.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rizky/k21_robocon2022/build/CMakeFiles --progress-num= "Built target roslint_joy"
+.PHONY : joy/CMakeFiles/roslint_joy.dir/all
+
+# Build rule for subdir invocation for target.
+joy/CMakeFiles/roslint_joy.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 joy/CMakeFiles/roslint_joy.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rizky/k21_robocon2022/build/CMakeFiles 0
+.PHONY : joy/CMakeFiles/roslint_joy.dir/rule
+
+# Convenience name for target.
+roslint_joy: joy/CMakeFiles/roslint_joy.dir/rule
+
+.PHONY : roslint_joy
+
+# clean rule for target.
+joy/CMakeFiles/roslint_joy.dir/clean:
+	$(MAKE) -f joy/CMakeFiles/roslint_joy.dir/build.make joy/CMakeFiles/roslint_joy.dir/clean
+.PHONY : joy/CMakeFiles/roslint_joy.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

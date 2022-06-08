@@ -14,7 +14,7 @@ class K21Main{
     public:
         K21Main(ros::NodeHandle *nh){
             vel_pub = nh->advertise<geometry_msgs::Twist>("/cmd_vel", 10);
-            joy = nh->subscribe("/joy", 10, &K21Main::joyCb, this);
+            joy = nh->subscribe("/joy_r2", 10, &K21Main::joyCb, this);
 
 
             // v_right_f_Command = nh->advertise<std_msgs::Float64>("/k21_robocon/right_f_motor/command", 1);
