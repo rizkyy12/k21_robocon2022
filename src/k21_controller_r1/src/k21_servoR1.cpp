@@ -2,44 +2,45 @@
 #include "std_msgs/UInt16.h"
 #include "sensor_msgs/Joy.h"
 
-ros::Publisher servo1;
-ros::Publisher servo2;
-ros::Publisher servo3;
+ros::Publisher servokanan;
+ros::Publisher servokiri;
+ros::Publisher servodepan;
 // Servo 1 : Pelontar
 // Servo 2 & 3 : Rak Ball
 
 ros::Subscriber joy;
 
 void servoCb(const sensor_msgs::Joy &msg){
-    std_msgs::UInt16 servo1_data;
-    std_msgs::UInt16 servo2_data;
-    std_msgs::UInt16 servo3_data;
+    std_msgs::UInt16 servokanan_data;
+    std_msgs::UInt16 servokiri_data;
+    std_msgs::UInt16 servodepan_data;
 
-    if(msg.buttons[2] == 1){
-        servo1_data.data = 180;
+    if(msg.buttons[4] == 1){
+        servodepan_data.data = 90;
     }
     else if(msg.buttons[1] == 1){
-        servo1_data.data = 180;
+        servokiri_data.data = 90;
     }
-    else if (msg.buttons[4] == 1){
-        servo3_data.data = 180;
+    else if (msg.buttons[2] == 1){
+        servokanan_data.data = 90;
     }
     else{
-        servo1_data.data = 0;
-        servo2_data.data = 0;
-        servo3_data.data = 0;
+        servokanan_data.data = 0;
+        servokiri_data.data = 0;
+        servodepan_data.data = 0;
     }
-    servo1.publish(servo1_data);
-    servo2.publish(servo2_data);
-    servo3.publish(servo3_data);
+
+    servokanan.publish(servokanan_data);
+    servokiri.publish(servokiri_data);
+    servodepan.publish(servodepan_data);
 }
 
 int main(int argc, char **argv){
     ros::init(argc, argv, "servo_node");
     ros::NodeHandle nh;
-    servo1 = nh.advertise<std_msgs::UInt16>("/servo1", 100);
-    servo2 = nh.advertise<std_msgs::UInt16>("/servo2", 100);
-    servo3 = nh.advertise<std_msgs::UInt16>("/servo3", 100);
+    servokanan = nh.advertise<std_msgs::UInt16>("/servo_kanan", 100);
+    servokiri = nh.advertise<std_msgs::UInt16>("/servo_kiri", 100);
+    servodepan = nh.advertise<std_msgs::UInt16>("/servo_depan", 100);
     joy = nh.subscribe("/joy", 1000, servoCb);
     ros::spin();
     return 0;

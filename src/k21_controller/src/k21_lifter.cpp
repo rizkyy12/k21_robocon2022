@@ -7,8 +7,7 @@ ros::Subscriber joy;
 
 void lifterCb(const sensor_msgs::Joy &msg){
     std_msgs::Float64 lifter;
-    std_msgs::Float64 gripper;
-
+    
     if (msg.buttons[5] ==1){
         lifter.data = 255;
     }
